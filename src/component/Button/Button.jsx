@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const Button = ({ onLoadMoreImg }) => {
   return (
     <button
@@ -12,3 +13,7 @@ const Button = ({ onLoadMoreImg }) => {
 };
 
 export default Button;
+
+Button.propTypes = {
+  onLoadMoreImg: PropTypes.func.isRequired,
+};

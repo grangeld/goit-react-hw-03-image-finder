@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const Modal = ({ picture, description, onCloseModal }) => {
+const Modal = ({ picture, description = 'img', onCloseModal }) => {
   const handleCloseModal = event => {
     if (event.target === event.currentTarget) onCloseModal();
   };
@@ -25,3 +26,9 @@ const Modal = ({ picture, description, onCloseModal }) => {
 };
 
 export default Modal;
+
+Modal.propTypes = {
+  picture: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  onCloseModal: PropTypes.func.isRequired,
+};

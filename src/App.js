@@ -43,10 +43,11 @@ function App() {
       })
       .then(() => setShowSpiner(false))
       .then(() => {
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: 'smooth',
-        });
+        if (pageImg !== 1)
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth',
+          });
       });
   };
 
